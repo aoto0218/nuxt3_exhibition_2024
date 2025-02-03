@@ -1,5 +1,3 @@
-import { ref } from 'vue';
-
 export default function useProjects() {
     const projects = ref([
         {

@@ -19,7 +19,5 @@
 </template>
 
 <script setup>
-    import useProjects from '@/composables/useProjects';
-
     const { projects } = useProjects();
 </script>

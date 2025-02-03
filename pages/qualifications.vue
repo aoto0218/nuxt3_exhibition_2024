@@ -19,7 +19,5 @@
 </template>
 
 <script setup>
-    import { useQualifications } from '@/composables/useQualifications';
-
     const { qualifications } = useQualifications();
 </script>

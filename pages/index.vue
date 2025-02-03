@@ -1,7 +1,5 @@
 <script setup>
-import { useAge } from '@/composables/useAge';
-
-const { age } = useAge('2006-02-18');
+    const { age } = useAge('2006-02-18');
 </script>
 
 <template>

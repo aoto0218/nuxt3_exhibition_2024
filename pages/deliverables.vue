@@ -1,11 +1,25 @@
 <template>
     <NuxtLayout>
-        <h1 class="text-center">最近作成した成果物</h1>
-        <ul class="list-unstyled text-center" style="padding-bottom:20%">
-            <li class="fs-3">タイピングゲーム</li>
-            <li class="fs-3">ポートフォリオサイト</li>
-            <li class="fs-3">おみくじゲーム</li>
-            <li class="fs-3">About-Me</li>
-        </ul>
+        <div class="py-5">
+            <div class="container my-5">
+                <h1 class="text-center mb-4">最近作成した成果物</h1>
+                <div class="row">
+                    <div class="col-md-6 mb-4" v-for="project in projects" :key="project.title">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">{{ project.title }}</h5>
+                                <p class="card-text">{{ project.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </NuxtLayout>
 </template>
+
+<script setup>
+    import useProjects from '@/composables/useProjects';
+
+    const { projects } = useProjects();
+</script>

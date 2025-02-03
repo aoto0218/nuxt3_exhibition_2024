@@ -1,3 +1,9 @@
+<script setup>
+import { useAge } from '@/composables/useAge';
+
+const { age } = useAge('2006-02-18');
+</script>
+
 <template>
     <NuxtLayout>
         <div class="container py-5">
@@ -33,8 +39,8 @@
                 <h1 class="mb-3">自己紹介</h1>
                 <h2 class="mb-4">About Me</h2>
                 <ul class="list-unstyled">
-                    <li>氏名：早苗　碧大（さなえ　あおと）</li>
-                    <li>年齢：18歳</li>
+                    <li>氏名：早苗 碧大（さなえ あおと）</li>
+                    <li>年齢：{{ age }}歳</li>
                     <li>誕生日：2月18日</li>
                     <li>出身地：滋賀県米原市（現在は京都で一人暮らし）</li>
                 </ul>
